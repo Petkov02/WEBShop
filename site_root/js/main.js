@@ -109,10 +109,9 @@ function updatetotal(){
         var quatityElement = cartBox.getElementsByClassName('cart-quantity')[0];
         var price = parseFloat(priceElement.innerText.replace("$", ""));
         var quatity = quatityElement.value;
-        total = total + (price * quatity);
+        total = (total + (price * quatity)).toFixed(2);
     }
-        total = Math.round(total * 100) / 100;
-
+        // total = Math.round(total * 100) / 100;
         document.getElementsByClassName('total-price')[0].innerText = "$" + total;
         
 }
