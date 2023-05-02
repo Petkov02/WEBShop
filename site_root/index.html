@@ -13,8 +13,17 @@
     <header>
         <div class="nav container">
             <a href="#" class="logo">Watches</a>
-            <i class='bx bx-user' id="acc-icon" title="Register"></i>
-            <i class='bx bx-shopping-bag' id="cart-icon" title="Shopping cart"></i>
+            <ul class="navbar">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./pages/products.html">Products</a></li>
+                <li><a href="./pages/contacts.html">Contacts</a></li>
+                <li><a href="./pages/about.html">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class='bx bx-user' id="acc-icon" title="Register"></i>
+                <a href="#" id="cart-icon" title="Shopping cart"><i class='bx bx-shopping-bag'></i id="cart-quantity" ><span>0</span></a>
+                <i class="bx bx-menu" id="menu-icon" title="Menu" ></i>                 
+            </div>
             <div class="cart">
             <h2 class="cart-title">Your Cart</h2>
                 <div class="cart-content">
@@ -29,7 +38,7 @@
                     </div> -->
                 </div>
                 <div class="total">
-                    <div class="total-title">Total</div>
+                    <div class="total-title">Total:</div>
                     <div class="total-price">$0</div>
                 </div>
                 <button type="button" class="btn-buy">Buy Now</button>
@@ -38,22 +47,8 @@
         </div>
     </header>
     <section class="shop container">
-        <h2 class="section-title">Products</h2>
+        <h2 class="section-title">Top Products</h2>
         <div class="shop-content">
-            <!-- Product1 -->
-            <div class="product-box">
-                <img src="./images/Product1.png" alt="" class="product-img">
-                <h2 class="product-title">White Watch</h2>
-                <span class="price">$99.95</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <!-- Product2 -->
-            <div class="product-box">
-                <img src="./images/Product2.png" alt="" class="product-img">
-                <h2 class="product-title">Orange Watch</h2>
-                <span class="price">$99.95</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
             <!-- Product3 -->
             <div class="product-box">
                 <img src="./images/Product3.png" alt="" class="product-img">
@@ -75,8 +70,68 @@
                 <span class="price">$99.95</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
+            <!-- Product1 -->
+            <div class="product-box">
+                <img src="./images/Product1.png" alt="" class="product-img">
+                <h2 class="product-title">White Watch</h2>
+                <span class="price">$99.95</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!-- Product2 -->
+            <div class="product-box">
+                <img src="./images/Product2.png" alt="" class="product-img">
+                <h2 class="product-title">Orange Watch</h2>
+                <span class="price">$99.95</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
         </div>
     </section>
-    <script src="js/main.js"></script>
+    <hr>
+    <section class="newsletter container">
+        <div class="heading">
+            <h2>Subscribe <span>Newsletter</span></h2>
+        </div>
+        <form action="">
+            <input type="email" name="" id="" placeholder="Enter your email..." class="email-box" required>
+            <input type="submit" value="Subscribe" class="btn">
+        </form>
+    </section>
+    <hr>
+    <section class="footer container">
+       <div class="footer-box">
+            <a href="#" class="logo">Watches</a>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook' ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="#"><i class='bx bxl-youtube' ></i></a>
+            </div>
+       </div>
+       <div class="footer-box">
+        <h3>Pages</h3>
+        <a href="#home">Home</a>
+        <a href="./pages/products.html">Products</a>
+        <a href="./pages/contacts.html">Contacts</a>
+        <a href="./pages/about.html">About</a>
+       </div>
+       <div class="footer-box">
+        <h3>Legal</h3>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Terms Of Use</a>
+        <a href="#">Disclaimer</a>
+       </div>
+       <div class="footer-box">
+        <h3>Branches</h3>
+        <p>United States</p>
+        <p>Germany</p>
+        <p>Bulgaria</p>
+        <p>China</p>
+       </div>
+    </section>
+    <div class="copyright">
+        <p>&#169; Petkov All Rights Reserved.</p>
+    </div>
+    <script src="./js/main.js"></script>
 </body>
 </html>

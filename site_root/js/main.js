@@ -1,6 +1,13 @@
 let cartIcon = document.querySelector('#cart-icon');
 let cart = document.querySelector('.cart');
 let closeCart = document.querySelector('#close-cart');
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+   };
 
 cartIcon.onclick = () => {
     cart.classList.add("active");
@@ -9,7 +16,6 @@ cartIcon.onclick = () => {
 closeCart.onclick = () => {
     cart.classList.remove("active");
 };
-
 if (document.readyState == 'loading'){
     document.addEventListener('DOMContentLoaded', ready);
 } else {
@@ -109,9 +115,22 @@ function updatetotal(){
         var quatityElement = cartBox.getElementsByClassName('cart-quantity')[0];
         var price = parseFloat(priceElement.innerText.replace("$", ""));
         var quatity = quatityElement.value;
-        total = (total + (price * quatity)).toFixed(2);
+        total = total + (price * quatity);
+        total = Math.round(total * 100) / 100;
     }
-        // total = Math.round(total * 100) / 100;
+      // Get the cart icon's span element
+    var cartSpan = document.querySelector('#cart-icon span');
+    
+    // Get the total number of products in the cart
+    var totalQuantity = 0;
+    var cartBoxes = document.querySelectorAll('.cart-box');
+    for (var i = 0; i < cartBoxes.length; i++) {
+        var quantityElement = cartBoxes[i].querySelector('.cart-quantity');
+        totalQuantity += parseInt(quantityElement.value);
+    }
+    
+    // Update the cart icon's span with the total quantity
+    cartSpan.textContent = totalQuantity;  
         document.getElementsByClassName('total-price')[0].innerText = "$" + total;
         
 }
